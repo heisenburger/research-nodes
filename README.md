@@ -6,6 +6,13 @@ The idea is that all my notes and pdfs can live in one place, organised by direc
 
 I also want this to be a place where I can organise reading lists, to-read lists, and citations.
 
+Some requirements I've set out for myself (based on my personal preferences):
+
+- Notes and source texts (e.g. pdf papers) must live locally and be accessible offline
+- There are to be no weird or unexpected note formats or complex directory organisation. 
+- Notes are markdown files.
+- Notes and source texts, pdfs, images, whatever, can be thrown into the relevant project folder. I want to keep a relatively flat directory structure: `projects/project-name/[everything to do with that project]`
+
 ## TODO
 
 - [ ] Write jekyll plugin to automatically generate project pages
@@ -23,7 +30,19 @@ Future features (out of scope for now):
 - [ ] Add node from existing node
 - [ ] Edit metadata and add/edit notes in browser
 
+## Usage
+
+FIXME: Rewrite the following to be more friendly:
+
+- Research notes are in the form of markdown files
+- Each markdown file are notes that pertain to a certain source text
+- notes are organised under project folders
+- project folders are found under `/projects/`
+- Currently you'll need to manually add the parent texts :(
+
 ## Installation
+
+**NB**: This doesn't work yet, please don't install it.
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -44,16 +63,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install research-nodes
-
-## Usage
-
-FIXME: Rewrite the following to be more friendly:
-
-- Research notes are in the form of markdown files
-- Each markdown file are notes that pertain to a certain source text
-- notes are organised under project folders
-- project folders are found under `/projects/`
-- Currently you'll need to manually add the parent texts :(
 
 ## Contributing
 
