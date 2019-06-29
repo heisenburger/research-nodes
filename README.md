@@ -1,11 +1,27 @@
 # research-nodes
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+Personal tool to organise and visualise my research notes for various projects.
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+The idea is that all my notes and pdfs can live in one place, organised by directories. The Jekyll layer then takes these notes and organises them into a tree visualisation, showing how texts lead to other texts, showing how I traverse texts as I research.
 
-TODO: Delete this and the text above, and describe your gem
+I also want this to be a place where I can organise reading lists, to-read lists, and citations.
 
+## TODO
+
+- [ ] Write jekyll plugin to automatically generate project pages
+- [ ] Write jekyll plugin to automatically generate to-read list
+- [ ] Get node structures (possibly with jekyll-sitemap?)
+- [ ] Show parent and children pages on node view
+- [ ] Make tree-diagram visualisation
+
+Currently the browser view is read-only, and will remain read-only for the foreseeable future.
+
+Future features (out of scope for now):
+
+- [ ] Add project from browser
+- [ ] Add node inside project
+- [ ] Add node from existing node
+- [ ] Edit metadata and add/edit notes in browser
 
 ## Installation
 
@@ -31,11 +47,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+FIXME: Rewrite the following to be more friendly:
+
+- Research notes are in the form of markdown files
+- Each markdown file are notes that pertain to a certain source text
+- notes are organised under project folders
+- project folders are found under `/projects/`
+- Currently you'll need to manually add the parent texts :(
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/heisenburger/research-nodes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
