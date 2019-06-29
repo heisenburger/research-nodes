@@ -1,0 +1,13 @@
+{% comment %}
+  Creates an array of projects in current site
+  Returns
+    - an array of projects
+{% endcomment %}
+
+{% capture all_projects %}
+  {% for page in site.pages %}{% capture project_folder %}{% include find-project-folder.html path=page.path %}{% endcapture %}{{ project_folder }},{% endfor %}
+{% endcapture %}
+
+{% assign project_list = all_projects | strip_newlines | strip | remove: " ," | split: "," | uniq | reverse | join: "," %}
+
+{{ project_list }}

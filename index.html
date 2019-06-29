@@ -1,0 +1,17 @@
+---
+title: My research repository
+---
+
+<h2>Projects</h2>
+{% capture projects %}
+  {% include get-site_projects.html %}
+{% endcapture %}
+
+{% assign project_list = projects | split: "," %}
+<ul>
+  {% for project in project_list %}
+  <li>{{ project }}</li>
+  {% endfor %}
+  <li><a href="#">+ Add new project</a></li>
+</ul>
+

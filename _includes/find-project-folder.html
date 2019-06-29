@@ -1,0 +1,8 @@
+{% comment %}
+  Finds the folder name that the current page is in
+  Parameters:
+    - path
+  Returns:
+    - project folder
+{% endcomment %}
+{% assign path = include.path | split: "/" | reverse %} {{ path[1] }}
