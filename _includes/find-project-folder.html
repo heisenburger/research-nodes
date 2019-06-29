@@ -5,4 +5,9 @@
   Returns:
     - project folder
 {% endcomment %}
-{% assign path = include.path | split: "/" | reverse %} {{ path[1] }}
+
+{% assign path = include.path | split: "/" | reverse %}
+
+{% if path.size > 2 %}
+  {{ path[1] }}
+{% endif %}

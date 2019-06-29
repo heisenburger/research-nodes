@@ -6,11 +6,12 @@ title: My research repository
 {% capture projects %}
   {% include get-site_projects.html %}
 {% endcapture %}
-
-{% assign project_list = projects | split: "," %}
+{% assign project_list = projects | strip_newlines | strip | split: "," | uniq %}
 <ul>
   {% for project in project_list %}
-  <li>{{ project }}</li>
+    {% unless project == "" %}
+      <li><a href="/projects/{{ project }}">{{ project }}</a></li>
+    {% endunless %}
   {% endfor %}
   <li><a href="#">+ Add new project</a></li>
 </ul>

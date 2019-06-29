@@ -1,0 +1,28 @@
+{% comment %}
+  Lists nodes inside project
+  Parameters:
+    - path (string)
+  Returns:
+    - list of nodes in project
+{% endcomment %}
+
+{% capture current_project %}
+  {% include find-project-folder.html path=include.path %}
+{% endcapture %}
+{% assign current = current_project | strip_newlines | strip %}
+
+<ul>
+  {% for node in site.pages %}
+
+    {% capture node_project %}
+      {% include find-project-folder.html path=node.path %}
+    {% endcapture %}
+
+    {% assign project_clean = node_project | strip_newlines | strip %}
+
+    {% if project_clean == current and node.url != page.url %}
+    <li><a href="{{ node.url }}">{{ node.title }}</a></li>
+    {% endif %}
+
+  {% endfor %}
+</ul>

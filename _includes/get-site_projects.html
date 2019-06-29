@@ -5,7 +5,7 @@
 {% endcomment %}
 
 {% capture all_projects %}
-  {% for page in site.pages %}{% capture project_folder %}{% include find-project-folder.html path=page.path %}{% endcapture %}{{ project_folder }},{% endfor %}
+  {% for page in site.pages %}{% capture project_folder %}{% include find-project-folder.html path=page.path %}{% endcapture %}{{ project_folder | strip }},{% endfor %}
 {% endcapture %}
 
 {% assign project_list = all_projects | strip_newlines | strip | remove: " ," | split: "," | uniq | reverse | join: "," %}
